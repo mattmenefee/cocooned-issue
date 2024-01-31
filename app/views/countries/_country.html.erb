@@ -1,0 +1,21 @@
+<div id="<%= dom_id country %>">
+  <h1><%= country.name %></h1>
+
+  <h2>Cities</h2>
+
+  <ul>
+    <% country.cities.order(:name).each do |city| %>
+      <li id="<%= dom_id city %>">
+        <h3><%= city.name %></h3>
+
+        <ul>
+          <% city.buildings.order(:name).each do |building| %>
+            <li id="<%= dom_id building %>">
+              <%= building.name %>
+            </li>
+          <% end %>
+        </ul>
+      </li>
+    <% end %>
+  </ul>
+</div>

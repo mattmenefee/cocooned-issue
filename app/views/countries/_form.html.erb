@@ -1,0 +1,21 @@
+<%= simple_form_for(@country) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+
+    <h3>Cities</h3>
+    <%= cocooned_container do %>
+      <%= f.simple_fields_for :cities do |city_form| %>
+        <%= render 'city_fields', f: city_form %>
+      <% end %>
+
+      <p><%= cocooned_add_item_link 'Add a city', f, :cities %></p>
+    <% end %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

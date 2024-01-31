@@ -1,0 +1,14 @@
+<%= cocooned_item class: 'city-item' do %>
+  <%= f.input :name %>
+
+  <%= cocooned_remove_item_link 'Remove City', f %>
+
+  <h3>Buildings</h3>
+  <%= cocooned_container do %>
+    <%= f.simple_fields_for :buildings do |building_form| %>
+      <%= render 'building_fields', f: building_form %>
+    <% end %>
+
+    <p><%= cocooned_add_item_link 'Add a building', f, :buildings %></p>
+  <% end %>
+<% end %>

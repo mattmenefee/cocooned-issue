@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Steps to reproduce the issue:
 
-Things you may want to cover:
+```ruby
+git clone git@github.com:mattmenefee/cocooned-issue.git
+cd cocooned-issue
+bundle install # Note this requires Google Chrome to be installed first
+bin/rspec spec
+```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Then note the failing test.
