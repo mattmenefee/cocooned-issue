@@ -81,6 +81,8 @@ GEM
     bootsnap (1.18.3)
       msgpack (~> 1.2)
     builder (3.2.4)
+    cocooned (2.1.0)
+      rails (>= 6.0, <= 7.2)
     concurrent-ruby (1.2.3)
     connection_pool (2.4.1)
     crass (1.0.6)
@@ -233,6 +235,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  cocooned (~> 2.1.0)
   debug
   importmap-rails
   jbuilder
