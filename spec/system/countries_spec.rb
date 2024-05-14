@@ -57,7 +57,6 @@ RSpec.describe 'Countries', :js do
 
       click_link 'Add a building'
 
-      # NOTE: the building partial is correctly located within the "City 3" Cocooned form
       within '.building-item' do
         fill_in 'Name', with: 'Building 3A'
       end
@@ -75,9 +74,8 @@ RSpec.describe 'Countries', :js do
       expect(page).to have_content('Building 2A')
     end
 
-    # NOTE: Building 3A was erroneously associated with City 2 instead of City 3
     within 'li', text: 'City 3' do
-      expect(page).to have_content('Building 3A') # this fails
+      expect(page).to have_content('Building 3A')
     end
   end
 end
