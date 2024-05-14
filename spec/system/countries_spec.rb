@@ -41,6 +41,8 @@ RSpec.describe 'Countries', :js do
         fill_in 'Name', with: 'City 2'
       end
 
+      fill_in_rich_text_area 'Description', with: 'The most friendly city!'
+
       click_link 'Add a building'
 
       within '.building-item' do
@@ -72,6 +74,8 @@ RSpec.describe 'Countries', :js do
 
     within 'li', text: 'City 2' do
       expect(page).to have_content('Building 2A')
+
+      expect(page).to have_content('The most friendly city!')
     end
 
     within 'li', text: 'City 3' do
