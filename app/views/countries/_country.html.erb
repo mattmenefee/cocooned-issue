@@ -8,6 +8,14 @@
       <li id="<%= dom_id city %>">
         <h3><%= city.name %></h3>
 
+        <h6>Description:</h6>
+
+        <% if city.description.present? %>
+          <p><%= city.description %></p>
+        <% else %>
+          <p>No description provided.</p>
+        <% end %>
+
         <ul>
           <% city.buildings.order(:name).each do |building| %>
             <li id="<%= dom_id building %>">

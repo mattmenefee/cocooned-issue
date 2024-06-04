@@ -1,6 +1,8 @@
 <%= cocooned_item class: 'city-item' do %>
   <%= f.input :name %>
 
+  <%= f.input :description, as: :rich_text_area %>
+
   <%= cocooned_remove_item_link 'Remove City', f %>
 
   <h3>Buildings</h3>
