@@ -41,7 +41,7 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem "image_processing", "~> 1.2"
 
-gem "cocooned", "~> 2.1.0"
+gem "cocooned", ">= 2.2.1"
 
 gem "simple_form"
 
